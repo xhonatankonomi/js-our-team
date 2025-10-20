@@ -77,5 +77,12 @@ function addNewMember(event) {
   const newRole = document.getElementById('inputRuolo').value.trim();
   const newEmail = document.getElementById('inputEmail').value.trim();
   const newImgUrl = document.getElementById('inputImg').value.trim();
+  const defaultImage =  "https://picsum.photos/id/1084/120/120";
 
+  const newMember = {
+    name: newName,
+    role: newRole,
+    email: newEmail,
+    img: newImgUrl || defaultImage
+  };
 }
