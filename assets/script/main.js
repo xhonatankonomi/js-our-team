@@ -45,19 +45,18 @@ let cardsHTML = "";
 for (let index = 0; index < teamMembers.length; index++) {
     const element = teamMembers[index];
     const {name, role, email, img} = element;
-    console.log(name, role, email, img)
-    
     cardsHTML += `
         <div class="col-lg-6">
                     <div class="card">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="./assets/img/female3.png" class="img-fluid rounded-start" alt="Team Member 3">
+                                <img src="./assets/${img}" class="img-fluid rounded-start" alt="Team Member">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title"></h5>
-                                    <p class="card-text"></p>
+                                    <h5 class="card-title">${name}</h5>
+                                    <p class="card-text">${role}</p>
+                                    <p class="card-text">${email}</p>
                                 </div>
                             </div>
                         </div>
@@ -65,3 +64,5 @@ for (let index = 0; index < teamMembers.length; index++) {
                 </div>
     `
 }
+
+gertrudo.innerHTML = cardsHTML
