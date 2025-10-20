@@ -46,5 +46,6 @@ console.log(teamMembers)
 
 for (let index = 0; index < teamMembers.length; index++) {
     const element = teamMembers[index];
+    const {name, role, email, img} = teamMembers
     
 }
