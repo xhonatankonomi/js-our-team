@@ -36,3 +36,9 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+
+const gertrudo = document.getElementById('gertrudo');
+
+let cardsHTML = "";
+
