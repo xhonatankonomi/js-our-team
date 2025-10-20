@@ -77,7 +77,7 @@ function addNewMember(event) {
   const newRole = document.getElementById('inputRuolo').value.trim();
   const newEmail = document.getElementById('inputEmail').value.trim();
   const newImgUrl = document.getElementById('inputImg').value.trim();
-  const defaultImage =  "https://picsum.photos/id/1084/120/120";
+  const defaultImage = "https://picsum.photos/id/1084/120/120";
 
   const newMember = {
     name: newName,
@@ -85,4 +85,16 @@ function addNewMember(event) {
     email: newEmail,
     img: newImgUrl || defaultImage
   };
+
+  teamMembers.push(newMember);
+  displayTeam();
+
+  document.getElementById('inputNome').value = '';
+  document.getElementById('inputRuolo').value = '';
+  document.getElementById('inputEmail').value = '';
+  document.getElementById('inputImg').value = '';
 }
+
+displayTeam();
+
+addButton.addEventListener('click', addNewMember);
