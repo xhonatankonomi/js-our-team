@@ -42,3 +42,9 @@ const gertrudo = document.getElementById('gertrudo');
 
 let cardsHTML = "";
 
+console.log(teamMembers)
+
+for (let index = 0; index < teamMembers.length; index++) {
+    const element = teamMembers[index];
+    
+}
