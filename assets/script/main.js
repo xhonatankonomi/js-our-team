@@ -41,23 +41,15 @@ const teamMembers = [
 // Seleziona l'elemento HTML con l'ID 'gertrudo' e lo memorizza nella variabile 'gertrudo'.
 // Questo elemento è il contenitore dove verrà visualizzato il contenuto dinamico.
 const gertrudo = document.getElementById('gertrudo');
+const addButton = document.getElementById('tasto-invio')
 
-// Inizializza una stringa vuota. Questa variabile accumulerà l'HTML generato
-// per tutte le card prima di essere inserita nel DOM.
-let cardsHTML = "";
+function displayTeam() {
+  let cardsHTML = "";
 
-// Avvia un ciclo 'for' per iterare su ogni oggetto (membro del team) presente nell'array 'teamMembers'.
-// Si assume che l'array 'teamMembers' sia definito altrove nel codice e contenga i dati.
-for (let index = 0; index < teamMembers.length; index++) {
-    // Ad ogni iterazione, assegna l'oggetto corrente dell'array alla variabile 'element'.
+  for (let index = 0; index < teamMembers.length; index++) {
+
     const element = teamMembers[index];
-    
-    // Utilizza la "destructuring assignment" per estrarre le proprietà necessarie ('name', 'role', 'email', 'img')
-    // dall'oggetto 'element'. Questo rende l'accesso a questi dati più conciso.
-    const {name, role, email, img} = element;
-    
-    // Concatena l'HTML per la card del membro del team corrente alla variabile 'cardsHTML'.
-    // Viene utilizzato un template literal (stringa tra apici rovesci) per includere le variabili.
+    const { name, role, email, img } = element;
     cardsHTML += `
         <div class="col-lg-6">
             <div class="card">
@@ -75,10 +67,15 @@ for (let index = 0; index < teamMembers.length; index++) {
                 </div>
             </div>
         </div>
-    `
+        `
+  }
+  gertrudo.innerHTML = cardsHTML
 }
 
-// Terminato il ciclo, assegna l'intera stringa di HTML accumulata ('cardsHTML')
-// come contenuto interno (innerHTML) dell'elemento selezionato ('gertrudo').
-// Questo passo renderizza tutte le card sulla pagina.
-gertrudo.innerHTML = cardsHTML
+function addNewMember(event) {
+  const newName = document.getElementById('inputNome').value.trim();
+  const newRole = document.getElementById('inputRuolo').value.trim();
+  const newEmail = document.getElementById('inputEmail').value.trim();
+  const newImgUrl = document.getElementById('inputImg').value.trim();
+
+}
