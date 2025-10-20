@@ -81,7 +81,7 @@ function displayTeam() {
             <div class="card">
                 <div class="row g-0">
                     <div class="col-md-4">
-                                                <img src="./assets/${img}" class="img-fluid rounded-start" alt="Team Member">
+                      <img src="./assets/${img}" class="img-fluid rounded-start" alt="Team Member">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
